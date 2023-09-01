@@ -8,7 +8,7 @@ const studentRoute = require('../backend/routes/student.route')
 
 // Connecting mongoDB Database
 mongoose
-  .connect('mongodb://127.0.0.1:27017/react-mernstack-crud')
+  .connect('mongodb://127.0.0.1:27017/basic-mern-app')
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -26,7 +26,7 @@ app.use('/students', studentRoute)
 
 
 // PORT
-const port = 5000;
+const port = 4000;
 const server = app.listen(port, () => {
   console.log('Connected to port ' + port)
 })
